@@ -18,6 +18,15 @@ const SearchResultCard = (props) => {
           </h3>
           <div className="key-value-pair">
             <span className="key">Status: </span>
+            {result.status}
+          </div>
+          <div className="key-value-pair">
+            <span className="key">Species: </span>
+            {result.species}
+          </div>
+          <div className="key-value-pair">
+            <span className="key">Episodes: </span>
+            {/*  ddo something with episdoes here... */}
           </div>
         </div>
       </div>
