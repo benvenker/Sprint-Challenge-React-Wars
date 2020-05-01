@@ -25,6 +25,9 @@ const SearchPage = () => {
   return (
     <div className="app">
       <SearchForm searchTerm={searchTerm} handleChange={handleChange} />
+      {searchResults.map((result, i) => {
+        return <SearchResultCard key={i} result={result} />;
+      })}
     </div>
   );
 };
