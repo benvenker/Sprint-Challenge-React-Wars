@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchForm from "./SearchForm";
-import SearchResultCard from "./SearchResultCard";
+import { SearchResultCard } from "./SearchResultCard";
 import axios from "axios";
 
 const SearchPage = () => {

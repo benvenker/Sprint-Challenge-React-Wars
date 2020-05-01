@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import SearchResultCard from "./SearchResultCard";
+import { SearchResultCard } from "./SearchResultCard";
 
 const Character = (props) => {
   console.log("character props: ", props);
