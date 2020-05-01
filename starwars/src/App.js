@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Route } from "react-router-dom";
-import SearchPage from "./components/SearchPage";
+import { SearchPage } from "./components/SearchPage";
 import Character from "./components/Character";
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
