@@ -1,7 +1,7 @@
 // Write your Character component here
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { Episodes } from "./Episodes";
 import { SearchResultCard } from "./SearchResultCard";
 
 const Character = (props) => {
@@ -30,7 +30,7 @@ const Character = (props) => {
       .then((data) => setCharacter(data));
   }, []);
 
-  const episodes = character.episodes;
+  const episodes = character.episode;
   const origin = character.origin.name;
 
   console.log(origin);
@@ -38,6 +38,7 @@ const Character = (props) => {
   return (
     <div className="character-page">
       <SearchResultCard result={character} />
+      <Episodes episodes={episodes} />
     </div>
   );
 };
