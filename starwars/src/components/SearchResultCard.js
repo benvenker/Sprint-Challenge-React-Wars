@@ -72,7 +72,7 @@ const SearchResultCard = (props) => {
             </div>
             <div className="key-value-pair">
               <span className="key">Episodes: </span>
-              {/*  ddo something with episdoes here... */}
+              {result.episode.reduce((total, i) => (total += 1), 0)}
             </div>
           </div>
         </div>

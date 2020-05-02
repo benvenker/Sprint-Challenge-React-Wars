@@ -51,6 +51,14 @@ const SearchPage = () => {
     return setSearchTerm(event.target.value);
   };
 
+  const paginateForward = () => {
+    setPage(page + 1);
+  };
+
+  const paginateBack = () => {
+    setPage(page - 1);
+  };
+
   useEffect(() => {
     axios
       .get(
@@ -73,6 +81,10 @@ const SearchPage = () => {
           </div>
         </div>
       </SearchPageStyles>
+      {page > 1 ? <button onClick={paginateBack}>Prev</button> : null}
+      {searchResults.length === 20 ? (
+        <button onClick={paginateForward}>Next</button>
+      ) : null}
     </div>
   );
 };
