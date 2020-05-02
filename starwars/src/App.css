@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  margin: 0;
+  background-color: rgb(153, 191, 182);
+  padding: 0 0 100px 0;
 }
 .Header {
   color: #443e3e;

@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
-import SearchForm from "./SearchForm";
+import { SearchForm } from "./SearchForm";
 import { SearchResultCard } from "./SearchResultCard";
 import axios from "axios";
 import styled from "styled-components";
 
 const SearchPageStyles = styled.div`
+  .app {
+    text-align: center;
+    margin: 0;
+    background-color: rgb(153, 191, 182);
+    padding: 0 0 100px 0;
+  }
   h1 {
     color: white;
     margin: 0;
@@ -56,13 +62,15 @@ const SearchPage = () => {
   }, [searchTerm, page]);
 
   return (
-    <div className="app">
+    <div className="App">
       <SearchPageStyles>
-        <SearchForm searchTerm={searchTerm} handleChange={handleChange} />
-        <div className="results-container">
-          {searchResults.map((result, i) => {
-            return <SearchResultCard key={i} result={result} />;
-          })}
+        <div className="header-image">
+          <SearchForm searchTerm={searchTerm} handleChange={handleChange} />
+          <div className="results-container">
+            {searchResults.map((result, i) => {
+              return <SearchResultCard key={i} result={result} />;
+            })}
+          </div>
         </div>
       </SearchPageStyles>
     </div>
